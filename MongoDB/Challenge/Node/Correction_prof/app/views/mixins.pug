@@ -1,8 +1,0 @@
-mixin restaurantCard(restaurant)
-  - const { building, street, zipcode } = restaurant.address;
-  <li>
-    <h4>#{restaurant.name}</h4>
-    <p><em>#{restaurant.cuisine}</em></p>
-    <p>#{building} #{street}, #{zipcode}, #{restaurant.borough}</p>
-    //- <pre>#{JSON.stringify(restaurant, null, 2)}</pre>
-  </li>
