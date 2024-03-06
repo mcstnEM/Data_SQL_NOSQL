@@ -9,6 +9,8 @@
     - [Ajouter un champ](#ajouter-un-champ)
     - [Supprimer un champ](#supprimer-un-champ)
   - [Récupérer des infos sur le status de notre base de données](#récupérer-des-infos-sur-le-status-de-notre-base-de-données)
+- [Ajouter nos premières données](#ajouter-nos-premières-données)
+- [Récupérer nos premières données](#récupérer-nos-premières-données)
 
 
 # MySQL Introduction
@@ -52,7 +54,7 @@ USE nom_bdd
 `PRIMARY KEY` vas automatiquement appliquer un `NOT NULL` au champ "id", par contre, si vous souhaitez avoir `AUTO_INCREMENT`, il faudrat l'indiquer manuellement.
 
 ```SQL
-CREATE TABLE nom_table(id INT PRYMARY KEY AUTO_INCREMENT, title VARCHAR(255) NOT NULL, content TEXT);
+CREATE TABLE nom_table(id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(255) NOT NULL, content TEXT);
 ```
 
 ## Ajouter/supprimer un champ avec `ALTER TABLE`
@@ -75,4 +77,16 @@ ALTER TABLE nom_table DROP COLUMN nom_du_champ;
 
 ```SQL
 status
+```
+
+# Ajouter nos premières données
+
+```SQL
+INSERT INTO nom_table(champ1, champ2, champ3) VALUES (valeur_champ1, valeur_champ2);
+```
+
+# Récupérer nos premières données
+
+```SQL
+SELECT * FROM nom_table;
 ```
