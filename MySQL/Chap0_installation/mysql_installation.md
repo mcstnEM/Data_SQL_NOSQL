@@ -14,6 +14,7 @@
   - [Via Windows](#via-windows)
   - [Via MacOS (OSX) avec Hombrew](#via-macos-osx-avec-hombrew)
   - [Via Linux](#via-linux)
+- [Installer PHPMyAdmin en deux commande avec Docker](#installer-phpmyadmin-en-deux-commande-avec-docker)
 
 # Installation Windows
 
@@ -141,3 +142,17 @@ Dans le terminal, afin de vérifier si le serveur MySQL est lancé, tapez la com
 
 - Lancé le serveur MySQL :  `sudo systemctl start mysql`
 - Stoppé le serveur MySQL : `sudo systemctl stop mysql`
+
+# Installer PHPMyAdmin en deux commande avec Docker
+
+Si vous souhaitez avoir une interface grafique on peut installer PHPMyAdmin dans un contener Docker. 
+
+Il vous faudra d'abord créer un réseau local dans Docker pour que le contener puisse communiquer avec votre instance de MySQL :
+
+```bash
+docker network create phpmyadmin_network
+```
+
+```bash
+docker run --name phpmyadmin -d --network phpmyadmin_network -e PMA_HOST=host.docker.internal -e PMA_USER=root -e PMA_PASSWORD=root -p 8080:80 phpmyadmin
+```
