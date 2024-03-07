@@ -15,6 +15,7 @@
   - [Récupérer des infos sur le status de notre base de données](#récupérer-des-infos-sur-le-status-de-notre-base-de-données)
   - [Ajouter nos premières données](#ajouter-nos-premières-données)
   - [Récupérer nos premières données](#récupérer-nos-premières-données)
+- [Importer une base de données](#importer-une-base-de-données)
 
 
 # MySQL Introduction
@@ -128,4 +129,14 @@ INSERT INTO nom_table(champ1, champ2, champ3) VALUES (valeur_champ1, valeur_cham
 
 ```SQL
 SELECT * FROM nom_table;
+```
+
+# Importer une base de données
+
+Pour importer des données il faut d'abord créer la base de données qui accueillera les données dans MySQL avec `CREATE DATABASE nom_base_de_donnees`.
+
+Ensuite, depuis votre terminal, placez-vous dans le dossier où se trouve le fichier SQL contenant la structure de la base de données et ses données, entré la commande suivante :
+
+```bash
+mysql -u root -p nom_base_de_donnees < fichier.sql
 ```

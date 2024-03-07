@@ -90,6 +90,8 @@ FROM table1
 CROSS JOIN table2;
 ```
 
+
+
 ## Bonnes Pratiques
 
 - Utilisez des alias pour simplifier vos requêtes, surtout lorsque vous travaillez avec des jointures complexes.

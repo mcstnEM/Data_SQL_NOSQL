@@ -43,6 +43,12 @@ CREATE TABLE livres (
 INSERT INTO livres (titre, auteur, année_publication) VALUES ('Les Misérables', 'Victor Hugo', 1862);
 ```
 
+On peut entrer plusieurs données en une seule commande :
+
+```sql
+INSERT INTO livres (titre, auteur, année_publication) VALUES ('1984', 'George Orwell', 1949), ('Le Meilleur des mondes','Aldous Huxley', 1932), ('Le Comte de Monte-Cristo', 'Alexandre Dumas', 1844);
+```
+
 ## Section 2 : Lecture de données (Read)
 
 ### Sélectionner toutes les colonnes
